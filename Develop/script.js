@@ -22,12 +22,6 @@
 // create an equation that creates a random char at the desired length and char types
 function password(){
   // Save the return value from the prompts
-  var charLengthPrompt =prompt("How many charcters do you want in your password? Enter a number 8-128.");
-  if (!(charLengthPrompt >= 8 && charLengthPrompt <= 128)){
-    return password();
-    }
-  // Password length
-  var length = ;
   
   // Password preferences (0 for no, 1 for yes)
   var lowerCase = 0;
@@ -35,8 +29,37 @@ function password(){
   var numeric = 0;
   var special = 0;
   
-
+  // Password length
+  var length = prompt("How many charcters do you want in your password? Enter a number 8-128.");
+    if (!(length >= 8 && length <= 128)){
+      alert("Character length must be between 8 and 128");
+      return password();
+      }
+  
+  var promptLowerCase = confirm("Do you want lower case characters in your password?");
+      if (true){
+        lowerCase++
+      }
+  
+  var promptUpperCase = confirm("Do you want upper case characters in your password?");
+      if (true){
+        upperCase++
+      }
+      
+  var promptNumeric = confirm("Do you want numeric characters in your password?");
+      if (true){
+        numeric++
+      }
+      
+  var promptspecial = confirm("Do you want special characters in your password?");
+      if (true){
+        special++
+      }
+  
+  
 }
+
+password();
 
 
 
