@@ -24,10 +24,10 @@ function password(){
   // Save the return value from the prompts
   
   // Password preferences (0 for no, 1 for yes)
-  var lowerCase = 0;
-  var upperCase = 0;
-  var numeric = 0;
-  var special = 0;
+  // var lowerCase = 0;
+  // var upperCase = 0;
+  // var numeric = 0;
+  // var special = 0;
   
   // Password length
   var length = prompt("How many charcters do you want in your password? Enter a number 8-128.");
@@ -38,25 +38,32 @@ function password(){
   
   var promptLowerCase = confirm("Do you want lower case characters in your password?");
       if (true){
-        lowerCase++
+        //lowerCase++
+        const lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
       }
   
   var promptUpperCase = confirm("Do you want upper case characters in your password?");
       if (true){
-        upperCase++
+        //upperCase++
+        const upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        console.log (upperCase);
       }
       
   var promptNumeric = confirm("Do you want numeric characters in your password?");
       if (true){
-        numeric++
+        //numeric++
+        const numeric = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
       }
       
   var promptspecial = confirm("Do you want special characters in your password?");
       if (true){
-        special++
+        //special++
+        const special = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+        console.log (special)
       }
   
-  
+  // const charUsed = 
 }
 
 password();
