@@ -20,8 +20,12 @@
 // take all desired char types and add them to an array
 
 // create an equation that creates a random password at the desired length and can use any of the preffered character typeschar types
+
+// Links password generator function to the button event
 generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", passwordgenerator);
+
+// Password generator
 function passwordgenerator(){
   
   // Password length
@@ -65,11 +69,9 @@ var promptSpecial = confirm("Do you want special characters in your password?");
     else{
       var special = [];
     }
-  //  
+
+// Combines selected arrays 
 const charUsed = lowerCase.concat(upperCase, numeric, special);
-// test code ignore
-  // console.log("test");
-  // console.log (charUsed);
 
 // Where the magic happens (generates password from user-created array)
 var password = ""
@@ -80,7 +82,7 @@ for (var i = 0; i < length; i++){
 // test
 console.log("Your password is: " + password);
 
-// Get references to the #generate element
+// Writes password to screen
   function myWritePassword() {
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
