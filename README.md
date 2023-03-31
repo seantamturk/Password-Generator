@@ -39,8 +39,8 @@ MIT License
 - user selected criteria for the password
 
 ## Links
-- [Github](https://github.com/seantamturk)
-- [Professional Portfolio](https://github.com/seantamturk/Password-Generator)
+- [Github](https://github.com/seantamturk/Password-Generator)
+- [Password Generator](https://seantamturk.github.io/Password-Generator/)
 - [Linkedin](https://www.linkedin.com/in/sean-tamturk-8253b722a/)
 - [Site Image](./images/websiteimage.png)
 

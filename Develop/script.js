@@ -78,6 +78,20 @@ var password = ""
 for (var i = 0; i < length; i++){
   var randomChar = charUsed[Math.floor(Math.random() * charUsed.length)];
   password += randomChar;
+
+password.split('').some(function(char) {
+  return lowerCase.includes(char);
+}) 
+  && password.split('').some(function(char) {
+  return upperCase.includes(char);
+}) 
+  && password.split('').some(function(char) {
+  return numeric.includes(char);
+}) 
+  && password.split('').some(function(char) {
+  return special.includes(char);
+})
+
 }
 // test
 console.log("Your password is: " + password);
