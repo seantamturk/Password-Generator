@@ -33,7 +33,7 @@ function passwordgenerator(){
   
   // confirm box for lower case
   var promptLowerCase = confirm("Do you want lower case characters in your password?");
-    if (true){
+    if (promptLowerCase){
               var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
       
     }
@@ -43,7 +43,7 @@ function passwordgenerator(){
   
   // Confirm box for upper case
   var promptUpperCase = confirm("Do you want upper case characters in your password?");
-    if (true){
+    if (promptUpperCase){
               var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
             }
     else{
@@ -51,15 +51,15 @@ function passwordgenerator(){
     }
   // confirm box for  
   var promptNumeric = confirm("Do you want numeric characters in your password?");
-    if (true){
+    if (promptNumeric){
               var numeric = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     }
     else{
       var numeric = [];
     }
     // confirm box for special 
-var promptspecial = confirm("Do you want special characters in your password?");
-    if (true){
+var promptSpecial = confirm("Do you want special characters in your password?");
+    if (promptSpecial){
               var special = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
     }
     else{
