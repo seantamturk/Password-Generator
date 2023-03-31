@@ -19,7 +19,7 @@
 
 // take all desired char types and add them to an array
 
-// create an equation that creates a random char at the desired length and char types
+// create an equation that creates a random password at the desired length and can use any of the preffered character typeschar types
 generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", passwordgenerator);
 function passwordgenerator(){
