@@ -20,14 +20,7 @@
 // take all desired char types and add them to an array
 
 // create an equation that creates a random char at the desired length and char types
-function password(){
-  // Save the return value from the prompts
-  
-  // Password preferences (0 for no, 1 for yes)
-  // var lowerCase = 0;
-  // var upperCase = 0;
-  // var numeric = 0;
-  // var special = 0;
+function passwordgenerator(){
   
   // Password length
   var length = prompt("How many charcters do you want in your password? Enter a number 8-128.");
@@ -36,54 +29,64 @@ function password(){
       return password();
       }
   
+  // confirm box for lower case
   var promptLowerCase = confirm("Do you want lower case characters in your password?");
-      if (true){
-                var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-        
-      }
-      else{
-        var lowerCase = [];
-      }
+    if (true){
+              var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
       
-      var promptUpperCase = confirm("Do you want upper case characters in your password?");
-      if (true){
-                var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-              }
-      else{
-        var upperCase = [];
-      }
-      
-      var promptNumeric = confirm("Do you want numeric characters in your password?");
-      if (true){
-                var numeric = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-      }
-      else{
-        var numeric = [];
-      }
-      
-      var promptspecial = confirm("Do you want special characters in your password?");
-      if (true){
-                var special = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
-      }
-      else{
-        var special = [];
-      }
+    }
+    else{
+      var lowerCase = [];
+    }
   
-  const charUsed = [lowerCase, upperCase, numeric, special];
-  console.log("test")
-  console.log (charUsed)
+  // Confirm box for upper case
+  var promptUpperCase = confirm("Do you want upper case characters in your password?");
+    if (true){
+              var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+            }
+    else{
+      var upperCase = [];
+    }
+  // confirm box for  
+  var promptNumeric = confirm("Do you want numeric characters in your password?");
+    if (true){
+              var numeric = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    }
+    else{
+      var numeric = [];
+    }
+    // confirm box for special 
+var promptspecial = confirm("Do you want special characters in your password?");
+    if (true){
+              var special = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+    }
+    else{
+      var special = [];
+    }
+  //  
+const charUsed = lowerCase.concat(upperCase, numeric, special);
+// test code ignore
+  // console.log("test");
+  // console.log (charUsed);
+
+// Where the magic happens (generates password from user-created array)
+var password = ""
+for (var i = 0; i < length; i++){
+  var randomChar = charUsed[Math.floor(Math.random() * charUsed.length)];
+  password += randomChar;
 }
-
-password();
-
-
-
-
-// Assignment code here
-
+// test
+console.log("Your password is: " + password);
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+}
+
+
+
+
+
+
 
 // Write password to the #password input
 function writePassword() {
@@ -91,8 +94,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   
   passwordText.value = password;
-
+  
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", passwordgenerator);
